@@ -1,18 +1,11 @@
-//let a ='Nhân';
-//console.log(a);
-//alert(a);
+/*var changeName = 'Nhan';
+console.log(changeName);
+changeName = 'Thien';
+console.log(changeName);*/
 
-//document.getElementById('someText').innerHTML = 'Javascript Learning';
+/*var changeMe;
+changeMe = 'Nhan';
+console.log(changeMe);*/
 
-//prompt('what your name');
-
-//let a = prompt('how old are you');
-//let b = prompt('what your name');
-//let c = a + b;
-
-/*function fun() {
-    alert('Hello');
-}
-
-fun();*/
-
+let myName = 'dog';
+console.log(`My own pet is ${myName}`);
