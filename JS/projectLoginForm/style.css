@@ -39,8 +39,7 @@ body {
     width: 50%;
     height: 40px;
     border-radius: 10px;
-    outline: none;
-    border-color: none;
+    border: none;
     font-family: 'Alata', sans-serif;
     padding-left: 10px;
 }
@@ -52,8 +51,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     background-color: #CCFFFF;
-    border-color: none;
-    outline: none;
+    border: none;
     border-radius: 10px;
     margin-bottom: 10px;
 }
