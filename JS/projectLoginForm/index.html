@@ -16,13 +16,28 @@
             <input type="date" id="dateOfBirth" name="birthday" placeholder="Date of Birth">
 
             <label for="phoneNumber">Phone Number</label>
-            <input type="number" id="phoneNumber" name="phone" placeholder="Phone Number">
+            <input type="number" id="phone" name="phone" placeholder="Phone Number">
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Email">
+            
+            <div class="box">
+                <label>Remember login
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
 
-            <button id="submit">Submit</button>
+            <button type="button" onclick="loginForm()">Submit</button>
         </div>
+    </div>
+
+    <div class="result">
+        <p id="userResult"></p>
+        <p id="dobResult"></p>
+        <p id="phoneResult"></p>
+        <p id="mailResult"></p>
+        <p id="fail"></p>
     </div>
 </body>
 <script src="loginForm.js"></script>
