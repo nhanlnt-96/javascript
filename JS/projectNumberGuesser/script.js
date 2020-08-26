@@ -9,3 +9,6 @@ function generateTarget() {
 }
 
 //Create a compareGuesses() function. This function will be called each round to determine which guess is closest to the target number.
+
+
+
