@@ -1,0 +1,46 @@
+.animation-project-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.slider .img-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 0px;
+    transition: all 1s ease-in;
+}
+
+.slider-wrapper {
+    border: 2px solid blue;
+    width: 1080px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.img-container {
+    flex: 0 0 100%;
+}
+
+.img-container img{
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+

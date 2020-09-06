@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="animation-project-wrapper">
+            <div class="slider">
+                <div class="btn btn-left">
+                    <button onclick="handleSliderMoving('left')">Left</button>
+                </div>
+                <div class="slider-wrapper">
+                    <div class="img-wrapper" id="moving-container">
+                        <div class="img-container">
+                            <img src="images/chubby-puppy-6-17-16.jpg">
+                        </div>
+                        <div class="img-container">
+                            <img src="images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg">
+                        </div>
+                        <div class="img-container">
+                            <img src="images/puppy-development-1280x720.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn btn-right">
+                    <button onclick="handleSliderMoving('right')">Right</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="home.js"></script>
+</html>
