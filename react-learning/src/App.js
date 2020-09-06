@@ -1,28 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import meow1 from './meow1.jpg'
+import meow2 from './meow2.jpg'
+import meow3 from './meow3.jpg'
+import meow4 from './meow4.jpg'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        Hello react
-
-        
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <a>Slider Wrapper</a>
       </header>
+
+      <div className="container">
+        <div className="btnLeft">
+          <button>Left</button>
+        </div>
+
+        <div className="sliderWrapper">
+          <img src={meow1} alt="meow1" />
+          <img src={meow2} alt="meow2" />
+          <img src={meow3} alt="meow3" />
+          <img src={meow4} alt="meow4" />
+        </div>
+
+        <div className="btnRight">
+          <button>Right</button>
+        </div>
+      </div> 
     </div>
   );
 }
