@@ -19,20 +19,26 @@
   display: flex;
   flex-direction: row;
   justify-items: center;
-  justify-content: space-between;
 }
 
-.sliderWrapper {
-  max-width: 800px;
-  min-width: 700px;
-  width: 100%;
+.slider {
+  max-width: 1080px;
+  max-height: 500px;
   display: flex;
   flex-direction: row;
   border: 2px solid black;
-  
+  overflow: hidden;
 }
 
-.sliderWrapper img {
-  width: 800px;
+.sliderWrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transition: all 1s ease-in;
+}
+
+.pictureWrapper img {
+  width: 1080px;
   height: 500px;
+  left: 0;
 }

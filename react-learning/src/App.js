@@ -14,22 +14,60 @@ function App() {
 
       <div className="container">
         <div className="btnLeft">
-          <button>Left</button>
+          <button onClick="movingButton('left')">Left</button>
         </div>
 
-        <div className="sliderWrapper">
-          <img src={meow1} alt="meow1" />
-          <img src={meow2} alt="meow2" />
-          <img src={meow3} alt="meow3" />
-          <img src={meow4} alt="meow4" />
+        <div className="slider">
+          <div className="sliderWrapper" id="movingSliderWrapper">
+            <div className="pictureWrapper">
+              <img src={meow1} alt="meow1" />
+            </div>
+            
+            <div className="pictureWrapper">
+              <img src={meow2} alt="meow2" />
+            </div>
+
+            <div className="pictureWrapper">
+              <img src={meow3} alt="meow3" />
+            </div>
+
+            <div className="pictureWrapper">
+              <img src={meow4} alt="meow4" />
+            </div>
+          </div>
         </div>
 
         <div className="btnRight">
-          <button>Right</button>
+          <button onClick="movingButton('right')">Right</button>
         </div>
       </div> 
     </div>
   );
 }
+
+var sliderPosition = 0;
+
+function movingButton(movingType) {
+  const movingSlider = document.getElementById('movingSliderWrapper');
+  const wrapperWidth = movingSlider.offsetWidth;
+
+  if (movingType === 'left') {
+    sliderPosition += wrapperWidth;
+
+    if (sliderPosition > 0) {
+      sliderPosition = -2160;
+    }
+  } else {
+    sliderPosition -= wrapperWidth;
+
+    if (sliderPosition < -2160) {
+      sliderPosition = 0;
+    }
+  }
+  movingButton.style.left = `${sliderPosition}px`;
+  console.log(wrapperWidth);
+}
+
+
 
 export default App;
