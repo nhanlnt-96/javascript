@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+.main {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.slider {
+  border: 1px solid blue;
+  max-width: 1080px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.sliderWrapper {
+  position: relative;
+  left: 0;
+}
+
+.pictureWrapper img {
+  width: 1080px;
+  height: 500px;
+}
+
+.btnLeft {
+  margin-right: 10px;
+}
+
+.btnRight {
+  margin-left: 10px;
+}
+
+.btn button {
+  font-family: 'Ranchers', cursive;
+  font-size: 20px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.sliderButton {
+  display: flex;
+  position: fixed;
+  top: 580px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btnPictureWrapper {
+  background-color: transparent;
+}
+
+.btnPictureWrapper button {
+  cursor: pointer;
+  outline: none;
+}
+
+.btnPictureWrapper button:hover {
+  background-color: gray;
+}
