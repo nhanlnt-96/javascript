@@ -1,0 +1,39 @@
+.main {
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+}
+
+.container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.contentPicture {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+  width: 1080px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.pictureWrapper {
+  width: 100%;
+}
+
+.btnClick {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+
+.btnClick button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin: 0 10px 0 10px;
+}
