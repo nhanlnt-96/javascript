@@ -1,0 +1,41 @@
+.main {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color:  #282c34;
+}
+
+.weather-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center ;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form {
+  width: 1080px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-logo {
+  width: 60%;
+  display: flex;
+  align-content: center;
+  margin-left: 10px;
+}
+
+.form-logo img {
+  width: 100%;
+}
+
+.info-form {
+  display: flex;
+  justify-content: center;
+
+}
