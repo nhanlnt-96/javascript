@@ -1,9 +1,5 @@
 var sliderPosition = 0;
 
-State
-
-props
-
 function handleSliderMoving(movingType) {
     const movingContainer = document.getElementById('moving-container');
     const wrapperWidth = movingContainer.offsetWidth;

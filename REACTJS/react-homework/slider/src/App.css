@@ -1,28 +1,39 @@
 .main {
-  margin: 0;
   padding: 0;
+  margin: 0;
+}
+
+.sliderWrapper {
   background-color: #282c34;
 }
 
 .container {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.contentPicture {
+.sliderPicture {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
-  width: 1080px;
-  height: 600px;
+  max-width: 1080px;
+  max-height: 600px;
   overflow: hidden;
 }
 
-.pictureWrapper {
-  width: 100%;
+.contentPicture {
+  left: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.pictureWrapper img {
+  width: 1080px;
+  height: 600px;
 }
 
 .btnClick {
@@ -36,4 +47,5 @@
   border: none;
   outline: none;
   margin: 0 10px 0 10px;
+  cursor: pointer;
 }

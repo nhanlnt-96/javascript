@@ -34,22 +34,6 @@ class App extends React.Component {
     movingContainer.style.left = `${newSliderPosition}px`;
   }
 
-  clickMoving = (clickType) => {
-    const movingContainer = document.getElementById('moving-container');
-    const wrapperWidth = movingContainer.offsetWidth;
-    let newSliderPosition = this.state.sliderPosition;
-
-    if (clickType === 1) {
-      newSliderPosition += wrapperWidth;
-    } else if (clickType === 2) {
-      newSliderPosition += wrapperWidth;
-    } else if (clickType === 3) {
-      newSliderPosition += wrapperWidth;
-    }
-    this.setState({sliderPosition: newSliderPosition});
-    movingContainer.style.left = `${newSliderPosition}px`;
-  }
-
   render () {
     return (
       <div className="body">
