@@ -1,4 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 * {
   padding: 0;
   margin: 0
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #483D8B;
+}
+
+.logo {
+  max-height: 200px;
+  display: flex;
+  justify-content: center;  
+}
+
+
+.logo img {
+  max-width: 100px;
+  width: 100%;
+  margin: 0 30px 0 30px;
+}
+
+.toolbar button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 10px;
+  margin: 0 10px 0 10px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Anton', sans-serif;
+}
+
+.toolbar button:hover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
 }
