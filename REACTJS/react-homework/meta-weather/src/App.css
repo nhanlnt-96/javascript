@@ -45,3 +45,11 @@
   cursor: pointer;
   margin-left: 10px;
 }
+
+p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
