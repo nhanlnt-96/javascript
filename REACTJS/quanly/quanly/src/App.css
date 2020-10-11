@@ -1,5 +1,9 @@
+/*import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+/* CSS App.js */
 * {
   padding: 0;
   margin: 0
@@ -8,7 +12,7 @@
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: #282c34;
 }
 
 .main-header {
@@ -49,4 +53,90 @@
   background-color: white;
   color: black;
   border-radius: 10px;
+}
+
+
+/* CSS of NewStaff.js */
+.title {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(196,222,246,0.9);
+  border-radius: 10px;
+}
+
+.input-info {
+  padding: 10px;
+}
+
+.input-info label {
+  margin: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.input-info input, select {
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 15px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.general-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-info-part-1, .detail-info-part-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#name {
+  width: 200px;
+}
+
+#issuedAt, #dob, #issuedOn, #pob {
+  width: 160px;
+}
+
+#permanenceAddress, #address {
+  width: 400px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.submit button {
+  border: 1px solid white;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Anton', sans-serif;
+  font-size: 15px;
+}
+
+.submit button:hover {
+  background-color: green;
+  border: green;
+  color: white;
 }

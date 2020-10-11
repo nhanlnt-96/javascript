@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+
 class NewStaff extends React.Component {
     render() {
         return (
@@ -190,7 +191,7 @@ class NewStaff extends React.Component {
                     </div>
 
                     <div className="submit">
-                        <button onClick="">Thêm mới</button>
+                        <button onClick="">THÊM MỚI</button>
                     </div>
                 </div>
             </div>

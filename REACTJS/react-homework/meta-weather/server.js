@@ -1,7 +1,6 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
-const { response } = require('express');
 
 //set origin
 const corsOptions = {
@@ -15,17 +14,22 @@ const port = 4000;
 app.use(cors(corsOptions));
 
 //get api
-app.get('/search/', async (req, res) => {
+app.get('/api/v1/weather/get-city-name', async (req, res) => {
   try {
     const result = await axios.get(`https://www.metaweather.com/api/location/search/?query=${req.query.cityName}`);
-    const woeid = result.data[0].woeid;
-    console.log(`woeid is: ${woeid}`);
-
-    const url = await axios.get(`https://www.metaweather.com/api/location/${woeid}`);
-    console.log(url);
-    res.send(url.data);
+    console.log(result);
+    res.send(result.data);
   } catch (err) {
-    console.log(err);
+    res.send(err);
+  }
+})
+
+app.get('/api/v1/weather/get-weather/:woeid', async (req, res) => {
+  try {
+    const result = await axios.get(`https://www.metaweather.com/api/location/${req.params.woeid}`);
+    res.send(result.data);
+  } catch (err) {
+    res.send(err);
   }
 })
 

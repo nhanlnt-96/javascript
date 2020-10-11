@@ -66,6 +66,13 @@
   border-radius: 5px;
 }
 
+.submit-btn button {
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
 .result-weather {
   width: 90%;
   height: 400px;
@@ -77,4 +84,3 @@
   background-color: white;
   opacity: 0.3;
 }
-

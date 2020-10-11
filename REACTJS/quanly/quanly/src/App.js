@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import logo from './assets/img/unnamed.png';
+import NewStaff from './components/NewStaff';
 
 class App extends React.Component {
   
@@ -18,7 +19,7 @@ class App extends React.Component {
             </div>
             
             <div className="logo">
-              <img src={logo} />
+              <img src={logo} alt="logo" />
             </div>
             
             <div className="toolbar">
@@ -32,9 +33,7 @@ class App extends React.Component {
         </header>
 
         <div className="main-body">
-          <div className="slider">
-            
-          </div>
+          <NewStaff />
         </div>
       </div>
     )
