@@ -20,25 +20,25 @@ state = {
 }
 
 //get weather by city name
-app.get('/search/', async (req, res) => {
+app.get('/api/v1/search/', async (req, res) => {
     try {
-        const cityNameResult = await axios.get(`https://www.metaweather.com/api/location/search/?query=${req.params.cityName}`);
-        console.log(cityNameResult.data);        
+        const cityNameResult = await axios.get(`https://www.metaweather.com/api/location/search/?query=${req.query.cityName}`);
+        console.log(cityNameResult.data); 
+        res.send(cityNameResult.data);       
     } catch (error) {
         console.log(error); 
     }
 })
 
 //get weather by city id
-/*app.get('/api/v1/search/get-city-name/:woeid', async(req, res) => {
+app.get('/api/v1/search/:woeid', async (req, res) => {
     try {
-        const cityIdResult = await axios.get(`https://www.metaweather.com/api/location/${req.params.woeid}`);
-        console.log(cityIdResult);
-        res.send(cityIdResult.data);
+        const cityNameResult = await axios.get(`https://www.metaweather.com/api/location/${req.params.woeid}`);
+        res.send(cityNameResult.data);       
     } catch (error) {
-        console.log(error);
+        console.log(error); 
     }
-})*/
+})
 
 app.listen(port);
 console.log(`Welldone: ${port}`);

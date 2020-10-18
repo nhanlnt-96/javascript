@@ -1,45 +1,84 @@
 import React from 'react';
 import './App.css';
+import logo from './assets/img/logo.png';
 import CityNameInput from './components/CityNameInput';
-import { getCityByText } from './services/weatherResultSearch';
+import { getCityById } from './services/weatheResultSearchById';
+import { getCityByText } from './services/weatherResultSearchByText';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isBusy: false,
-      error: '',
-      cities: ''
+      errorMessage: '',
+      testResult: [],
+      weatherResult: [],
     }
   }
 
-  getTemp = async (city) => {
+  getWeatherInfo = async (nameOfCity) => {
     try {
-      this.setState({
+      this.setState ({
         isBusy: true
+      });
+      const result = await getCityByText(nameOfCity);
+      this.setState ({
+        testResult: result.data
       })
-      const result = await getCityByText(city);
-      this.setState({
-        cities: result.data
-      });
-      console.log(this.state.cities);
+      console.log(this.state.testResult);
     } catch (error) {
-      this.setState({
-        error: error.message
-      });
+      this.setState ({
+        errorMessage: error.message
+      })
     } finally {
-      this.setState({
+      this.setState ({
         isBusy: false
       })
     }
   }
 
+  onClickCityTitle = async (cityTitle) => {
+    const cityWoeid = cityTitle.woeid;
+    if (cityWoeid !== '') {
+      try {
+        this.setState ({
+          isBusy: true
+        })
+        const result = await getCityById(cityWoeid);
+        this.setState ({
+          weatherResult: result
+        })
+        console.log(this.state.weatherResult);
+      } catch (error) {
+        this.setState ({
+          error: error.message
+        })
+      } finally {
+        this.setState ({
+          isBusy: false
+        })
+      }
+    }
+  }
+
   render() {
     return (
-      <React.Fragment>
-        <CityNameInput getTemp={this.getTemp}/>
-        <p>the result is {this.state.cities}</p>
-      </React.Fragment>
+      <div className="main">
+        <div className="header">
+          <img src={logo} alt="logo-weather" />
+        </div>
+        <CityNameInput getWeatherInfo={this.getWeatherInfo} />
+        <h1>You mean ?</h1>
+        <ul>
+          {
+            this.state.testResult.map((cityTitle, index) => (
+              <li key={cityTitle.woeid} onClick={() => this.onClickCityTitle(cityTitle)}>
+                    {index+1}. {cityTitle.title} - {cityTitle.woeid}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     )
   }
 }
