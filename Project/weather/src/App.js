@@ -65,19 +65,24 @@ class App extends React.Component {
     return (
       <div className="main">
         <div className="header">
-          <img src={logo} alt="logo-weather" />
+          <div className="logo">
+            <img src={logo} alt="logo-weather" />
+          </div>
         </div>
+      
         <CityNameInput getWeatherInfo={this.getWeatherInfo} />
-        <h1>You mean ?</h1>
-        <ul>
-          {
-            this.state.testResult.map((cityTitle, index) => (
-              <li key={cityTitle.woeid} onClick={() => this.onClickCityTitle(cityTitle)}>
-                    {index+1}. {cityTitle.title} - {cityTitle.woeid}
-              </li>
-            ))
-          }
-        </ul>
+
+        <div className="weather-result">
+          <ul>
+            {
+              this.state.testResult.map((cityTitle, index) => (
+                <li key={cityTitle.woeid} onClick={() => this.onClickCityTitle(cityTitle)}>
+                      {index+1}. {cityTitle.title} - {cityTitle.woeid}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     )
   }
