@@ -61,6 +61,7 @@ class App extends React.Component {
     }
   }
 
+
   render() {
     return (
       <div className="main">
@@ -73,16 +74,22 @@ class App extends React.Component {
         <CityNameInput getWeatherInfo={this.getWeatherInfo} />
 
         <div className="weather-result">
-          <div className="result-content">
+          <div className="result-content bg-color">
             <ul>
               {
                 this.state.testResult.map((cityTitle, index) => (
-                  <li key={cityTitle.woeid} onClick={() => this.onClickCityTitle(cityTitle)}>
+                  <li 
+                    key={cityTitle.woeid} 
+                    onClick={() => this.onClickCityTitle(cityTitle)}>
                         {index+1}. {cityTitle.title} - {cityTitle.woeid}
                   </li>
                 ))
               }
             </ul>
+          </div>
+
+          <div className="weather-show bg-color">
+            hello world
           </div>
         </div>
       </div>

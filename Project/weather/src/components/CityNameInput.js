@@ -5,7 +5,8 @@ class CityNameInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            nameOfCity: ''
+            nameOfCity: '',
+            keyInput: ''
         }
     }
 
@@ -19,7 +20,13 @@ class CityNameInput extends React.Component {
     render() {
         return (
             <div className="input-city-name">
-                <input className="input-name input-css" name="cityName" type="text" value={this.state.nameOfCity} placeholder="Type city name here..." onChange={this.inputCityName} />
+                <input 
+                    className="input-name input-css" 
+                    name="cityName" 
+                    type="text" 
+                    value={this.state.nameOfCity} 
+                    placeholder="Type city name here..." 
+                    onChange={this.inputCityName} />
                 <button className="btn-submit input-css" onClick={() => this.props.getWeatherInfo(this.state.nameOfCity)}>Submit</button>
             </div>
         )
