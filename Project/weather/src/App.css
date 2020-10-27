@@ -1,104 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
-    background-color: rgba(129, 181, 241);
+    padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-/*CityNameInput.js css*/
+/*CityNameInput.js CSS*/
 .input-city-name {
+    max-height: 50px;
+    min-height: 45px;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
 }
 
 .input-css {
     padding: 10px;
-    outline: none;
-    border: 1px solid white;
-    border-radius: 10px;
     font-size: 20px;
-    margin: 10px;
+    outline: none;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    color: black;
 }
 
-.btn-submit {
+.input-city-name button {
     cursor: pointer;
+    margin-left: 10px;
 }
 
-.btn-submit:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    font-weight: bold;
-}
-
-/*App.js css*/
+/*App.js CSS*/
 .main {
-    width: 100vw;
-    height: 100vh;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .loading-status {
-    width: 100%;
-    max-height: 50px;
-    min-height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    color: red;
+    height: 30px;
 
-.loading-status-text {
-    font-size: 20px;
-    font-style: italic;
-    font-family: 'Vampiro One', cursive;
-    color: white;
 }
 
 .weather-result {
-    max-width: 900px;
-    min-width: 850px;
-    max-height: 500px;
-    min-height: 450px;
+    width: 1200px;
+    height: 500px;
+    border: 1px solid black;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
 }
 
 .city-list {
-    width: 30%;
-    height: 100%;
-    border-right: 1px solid white;
+    width: 300px;
+    height: 500px;
+    border-right: 1px solid black;
+}
+
+.key-search {
+    width: 300px;
+    height: 30px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.key-search p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.key-search-list {
+    width: 300px;
+    height: 470px;
+    margin-top: 30px;
     overflow-y: scroll;
 }
 
-.title {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-}
-
-.title p {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.city-list-result {
-    margin-top: 50px;
-}
-
-.city-list-result li {
-    padding: 10px;
+.city-list li {
     list-style-type: none;
+    padding: 10px;
     cursor: pointer;
 }
 
-.city-list-result li:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+.city-list li:hover {
+    background-color: rgba(240, 240, 240);
+}
+
+.weather-content {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-title {
+    width: 900px;
+    height: 30px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-title p {
+    font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
+    font-size: 20px;
+}
+
+.weather-result-main {
+    width: 900px;
+    height: 470px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.follow-result-weather-day {
+    display: flex;
+    flex-direction: row;
 }

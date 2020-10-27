@@ -21,13 +21,13 @@ class CityNameInput extends React.Component {
         return (
             <div className="input-city-name">
                 <input 
-                    className="input-name input-css" 
+                    className="input-css" 
                     name="cityName" 
                     type="text" 
                     value={this.state.nameOfCity} 
                     placeholder="Type city name here..." 
                     onChange={this.inputCityName} />
-                <button className="btn-submit input-css" onClick={() => this.props.getWeatherInfo(this.state.nameOfCity)}>Submit</button>
+                <button className="input-css" onClick={() => this.props.getWeatherInfo(this.state.nameOfCity)}>Submit</button>
             </div>
         )
     }
