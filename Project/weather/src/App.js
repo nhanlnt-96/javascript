@@ -60,6 +60,63 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount () {
+    fetch("http://localhost:4000/api/v1/search/1252431")
+    .then(res => res.json())
+    .then(
+      (result) => {
+        this.setState ({
+          cityShowTitle: result.title,
+
+          applicableDate1: moment(result.consolidated_weather[0].applicable_date).format('DD-MM-YYYY'),
+          weatherStateName1: result.consolidated_weather[0].weather_state_name,
+          theTemp1: <p>{Math.round(result.consolidated_weather[0].the_temp)}&deg;</p>,
+          maxTemp1: <p>Max: {Math.round(result.consolidated_weather[0].max_temp)}&deg;</p>,
+          minTemp1: <p>Min: {Math.round(result.consolidated_weather[0].min_temp)}&deg;</p>,
+          weatherStateAbbr1: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[0].weather_state_abbr}.svg`,
+
+          applicableDate2: moment(result.consolidated_weather[1].applicable_date).format('DD-MM-YYYY'),
+          weatherStateName2: result.consolidated_weather[1].weather_state_name,
+          theTemp2: <p>{Math.round(result.consolidated_weather[1].the_temp)}&deg;</p>,
+          maxTemp2: <p>Max: {Math.round(result.consolidated_weather[1].max_temp)}&deg;</p>,
+          minTemp2: <p>Min: {Math.round(result.consolidated_weather[1].min_temp)}&deg;</p>,
+          weatherStateAbbr2: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[1].weather_state_abbr}.svg`,
+
+          applicableDate3: moment(result.consolidated_weather[2].applicable_date).format('DD-MM-YYYY'),
+          weatherStateName3: result.consolidated_weather[2].weather_state_name,
+          theTemp3: <p>{Math.round(result.consolidated_weather[2].the_temp)} &deg;</p>,
+          maxTemp3: <p>Max: {Math.round(result.consolidated_weather[2].max_temp)} &deg;</p>,
+          minTemp3: <p>Min: {Math.round(result.consolidated_weather[2].min_temp)} &deg;</p>,
+          weatherStateAbbr3: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[2].weather_state_abbr}.svg`,
+
+          applicableDate4: moment(result.consolidated_weather[3].applicable_date).format('DD-MM-YYYY'),
+          weatherStateName4: result.consolidated_weather[3].weather_state_name,
+          theTemp4: <p>{Math.round(result.consolidated_weather[3].the_temp)} &deg;</p>,
+          maxTemp4: <p>Max: {Math.round(result.consolidated_weather[3].max_temp)} &deg;</p>,
+          minTemp4: <p>Min: {Math.round(result.consolidated_weather[3].min_temp)} &deg;</p>,
+          weatherStateAbbr4: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[3].weather_state_abbr}.svg`,
+
+          applicableDate5: moment(result.consolidated_weather[4].applicable_date).format('DD-MM-YYYY'),
+          weatherStateName5: result.consolidated_weather[4].weather_state_name,
+          theTemp5: <p>{Math.round(result.consolidated_weather[4].the_temp)} &deg;</p>,
+          maxTemp5: <p>Max: {Math.round(result.consolidated_weather[4].max_temp)} &deg;</p>,
+          minTemp5: <p>Min: {Math.round(result.consolidated_weather[4].min_temp)} &deg;</p>,
+          weatherStateAbbr5: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[4].weather_state_abbr}.svg`,
+
+          applicableDate6: moment(result.consolidated_weather[5].applicable_date).format('DD-MM-YYYY'),
+          weatherStateName6: result.consolidated_weather[5].weather_state_name,
+          theTemp6: <p>{Math.round(result.consolidated_weather[5].the_temp)} &deg;</p>,
+          maxTemp6: <p>Max: {Math.round(result.consolidated_weather[5].max_temp)} &deg;</p>,
+          minTemp6: <p>Min: {Math.round(result.consolidated_weather[5].min_temp)} &deg;</p>,
+          weatherStateAbbr6: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[5].weather_state_abbr}.svg`,
+        });
+      },
+      (error) => {
+        console.log(error);
+      }
+    )
+  }
+
   getWeatherInfo = async (nameOfCity) => {
     try {
       this.setState ({
