@@ -15,6 +15,7 @@ class App extends React.Component {
       totalCityByText: '',
       nameInputShow: '',
       cityShowTitle: '',
+      weatherResult: [],
 
       applicableDate1: '',
       weatherStateName1: '',
@@ -148,6 +149,7 @@ class App extends React.Component {
         })
         const result = await getCityById(cityWoeid);
         this.setState ({
+          weatherResult: result.data,
           cityShowTitle: result.data.title,
 
           applicableDate1: moment(result.data.consolidated_weather[0].applicable_date).format('DD-MM-YYYY'),
@@ -191,7 +193,6 @@ class App extends React.Component {
           maxTemp6: <p>Max: {Math.round(result.data.consolidated_weather[5].max_temp)} &deg;</p>,
           minTemp6: <p>Min: {Math.round(result.data.consolidated_weather[5].min_temp)} &deg;</p>,
           weatherStateAbbr6: `https://www.metaweather.com/static/img/weather/${result.data.consolidated_weather[5].weather_state_abbr}.svg`,
-
         });
       } catch (error) {
         this.setState ({
@@ -203,6 +204,10 @@ class App extends React.Component {
         })
       }
     }
+  }
+
+  dayWeatherDetail = () => {
+    console.log(this.state.weatherResult.title);
   }
 
   render() {
@@ -279,7 +284,7 @@ class App extends React.Component {
               </div>
 
               <div className="follow-result-weather-day">
-                <div className="day2-result-weather">
+                <div className="day2-result-weather" onClick={this.dayWeatherDetail} >
                   <div className="applicable-date">
                     <h3>{this.state.applicableDate1}</h3>
                   </div>
