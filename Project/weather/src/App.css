@@ -47,6 +47,11 @@
     margin-left: 10px;
 }
 
+.btn-submit:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease-in;
+}
+
 .weather-result {
     width: 100%;
     height: 80%;
@@ -65,13 +70,12 @@
 }
 
 .key-search {
-    width: 60%;
-    height: 10%;
+    width: 100%;
+    height: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
     color: white;
     font-size: 25px;
     font-weight: bold;
@@ -80,8 +84,25 @@
 
 .key-search-list {
     width: 100%;
-    height: 90%;
-    margin-top: 10%;
+    height: 85%;
     overflow-y: scroll;
 }
 
+.key-search-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 10%;
+}
+
+.key-search-list li {
+    list-style-type: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    flex: 1 0 25%;
+}
+
+.key-search-list li:hover {
+    color: black;
+}
