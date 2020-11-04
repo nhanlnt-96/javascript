@@ -85,30 +85,30 @@ class App extends React.Component {
 
           applicableDate3: moment(result.consolidated_weather[2].applicable_date).format('DD-MM-YYYY'),
           weatherStateName3: result.consolidated_weather[2].weather_state_name,
-          theTemp3: <p>{Math.round(result.consolidated_weather[2].the_temp)} &deg;</p>,
-          maxTemp3: <p>Max: {Math.round(result.consolidated_weather[2].max_temp)} &deg;</p>,
-          minTemp3: <p>Min: {Math.round(result.consolidated_weather[2].min_temp)} &deg;</p>,
+          theTemp3: <p>{Math.round(result.consolidated_weather[2].the_temp)}&deg;</p>,
+          maxTemp3: <p>Max: {Math.round(result.consolidated_weather[2].max_temp)}&deg;</p>,
+          minTemp3: <p>Min: {Math.round(result.consolidated_weather[2].min_temp)}&deg;</p>,
           weatherStateAbbr3: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[2].weather_state_abbr}.svg`,
 
           applicableDate4: moment(result.consolidated_weather[3].applicable_date).format('DD-MM-YYYY'),
           weatherStateName4: result.consolidated_weather[3].weather_state_name,
-          theTemp4: <p>{Math.round(result.consolidated_weather[3].the_temp)} &deg;</p>,
-          maxTemp4: <p>Max: {Math.round(result.consolidated_weather[3].max_temp)} &deg;</p>,
-          minTemp4: <p>Min: {Math.round(result.consolidated_weather[3].min_temp)} &deg;</p>,
+          theTemp4: <p>{Math.round(result.consolidated_weather[3].the_temp)}&deg;</p>,
+          maxTemp4: <p>Max: {Math.round(result.consolidated_weather[3].max_temp)}&deg;</p>,
+          minTemp4: <p>Min: {Math.round(result.consolidated_weather[3].min_temp)}&deg;</p>,
           weatherStateAbbr4: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[3].weather_state_abbr}.svg`,
 
           applicableDate5: moment(result.consolidated_weather[4].applicable_date).format('DD-MM-YYYY'),
           weatherStateName5: result.consolidated_weather[4].weather_state_name,
-          theTemp5: <p>{Math.round(result.consolidated_weather[4].the_temp)} &deg;</p>,
-          maxTemp5: <p>Max: {Math.round(result.consolidated_weather[4].max_temp)} &deg;</p>,
-          minTemp5: <p>Min: {Math.round(result.consolidated_weather[4].min_temp)} &deg;</p>,
+          theTemp5: <p>{Math.round(result.consolidated_weather[4].the_temp)}&deg;</p>,
+          maxTemp5: <p>Max: {Math.round(result.consolidated_weather[4].max_temp)}&deg;</p>,
+          minTemp5: <p>Min: {Math.round(result.consolidated_weather[4].min_temp)}&deg;</p>,
           weatherStateAbbr5: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[4].weather_state_abbr}.svg`,
 
           applicableDate6: moment(result.consolidated_weather[5].applicable_date).format('DD-MM-YYYY'),
           weatherStateName6: result.consolidated_weather[5].weather_state_name,
-          theTemp6: <p>{Math.round(result.consolidated_weather[5].the_temp)} &deg;</p>,
-          maxTemp6: <p>Max: {Math.round(result.consolidated_weather[5].max_temp)} &deg;</p>,
-          minTemp6: <p>Min: {Math.round(result.consolidated_weather[5].min_temp)} &deg;</p>,
+          theTemp6: <p>{Math.round(result.consolidated_weather[5].the_temp)}&deg;</p>,
+          maxTemp6: <p>Max: {Math.round(result.consolidated_weather[5].max_temp)}&deg;</p>,
+          minTemp6: <p>Min: {Math.round(result.consolidated_weather[5].min_temp)}&deg;</p>,
           weatherStateAbbr6: `https://www.metaweather.com/static/img/weather/${result.consolidated_weather[5].weather_state_abbr}.svg`,
         });
       },
@@ -168,30 +168,30 @@ class App extends React.Component {
 
           applicableDate3: moment(result.data.consolidated_weather[2].applicable_date).format('DD-MM-YYYY'),
           weatherStateName3: result.data.consolidated_weather[2].weather_state_name,
-          theTemp3: <p>{Math.round(result.data.consolidated_weather[2].the_temp)} &deg;</p>,
-          maxTemp3: <p>Max: {Math.round(result.data.consolidated_weather[2].max_temp)} &deg;</p>,
-          minTemp3: <p>Min: {Math.round(result.data.consolidated_weather[2].min_temp)} &deg;</p>,
+          theTemp3: <p>{Math.round(result.data.consolidated_weather[2].the_temp)}&deg;</p>,
+          maxTemp3: <p>Max: {Math.round(result.data.consolidated_weather[2].max_temp)}&deg;</p>,
+          minTemp3: <p>Min: {Math.round(result.data.consolidated_weather[2].min_temp)}&deg;</p>,
           weatherStateAbbr3: `https://www.metaweather.com/static/img/weather/${result.data.consolidated_weather[2].weather_state_abbr}.svg`,
 
           applicableDate4: moment(result.data.consolidated_weather[3].applicable_date).format('DD-MM-YYYY'),
           weatherStateName4: result.data.consolidated_weather[3].weather_state_name,
-          theTemp4: <p>{Math.round(result.data.consolidated_weather[3].the_temp)} &deg;</p>,
-          maxTemp4: <p>Max: {Math.round(result.data.consolidated_weather[3].max_temp)} &deg;</p>,
-          minTemp4: <p>Min: {Math.round(result.data.consolidated_weather[3].min_temp)} &deg;</p>,
+          theTemp4: <p>{Math.round(result.data.consolidated_weather[3].the_temp)}&deg;</p>,
+          maxTemp4: <p>Max: {Math.round(result.data.consolidated_weather[3].max_temp)}&deg;</p>,
+          minTemp4: <p>Min: {Math.round(result.data.consolidated_weather[3].min_temp)}&deg;</p>,
           weatherStateAbbr4: `https://www.metaweather.com/static/img/weather/${result.data.consolidated_weather[3].weather_state_abbr}.svg`,
 
           applicableDate5: moment(result.data.consolidated_weather[4].applicable_date).format('DD-MM-YYYY'),
           weatherStateName5: result.data.consolidated_weather[4].weather_state_name,
-          theTemp5: <p>{Math.round(result.data.consolidated_weather[4].the_temp)} &deg;</p>,
-          maxTemp5: <p>Max: {Math.round(result.data.consolidated_weather[4].max_temp)} &deg;</p>,
-          minTemp5: <p>Min: {Math.round(result.data.consolidated_weather[4].min_temp)} &deg;</p>,
+          theTemp5: <p>{Math.round(result.data.consolidated_weather[4].the_temp)}&deg;</p>,
+          maxTemp5: <p>Max: {Math.round(result.data.consolidated_weather[4].max_temp)}&deg;</p>,
+          minTemp5: <p>Min: {Math.round(result.data.consolidated_weather[4].min_temp)}&deg;</p>,
           weatherStateAbbr5: `https://www.metaweather.com/static/img/weather/${result.data.consolidated_weather[4].weather_state_abbr}.svg`,
 
           applicableDate6: moment(result.data.consolidated_weather[5].applicable_date).format('DD-MM-YYYY'),
           weatherStateName6: result.data.consolidated_weather[5].weather_state_name,
-          theTemp6: <p>{Math.round(result.data.consolidated_weather[5].the_temp)} &deg;</p>,
-          maxTemp6: <p>Max: {Math.round(result.data.consolidated_weather[5].max_temp)} &deg;</p>,
-          minTemp6: <p>Min: {Math.round(result.data.consolidated_weather[5].min_temp)} &deg;</p>,
+          theTemp6: <p>{Math.round(result.data.consolidated_weather[5].the_temp)}&deg;</p>,
+          maxTemp6: <p>Max: {Math.round(result.data.consolidated_weather[5].max_temp)}&deg;</p>,
+          minTemp6: <p>Min: {Math.round(result.data.consolidated_weather[5].min_temp)}&deg;</p>,
           weatherStateAbbr6: `https://www.metaweather.com/static/img/weather/${result.data.consolidated_weather[5].weather_state_abbr}.svg`,
         });
       } catch (error) {
@@ -213,9 +213,9 @@ class App extends React.Component {
   render() {
     let data = null;
     if (this.state.isBusy && !this.state.errorMessage) {
-      data = <p className="loading-status-text">thank for waiting me...</p>;
+      data = <p>thank for waiting me...</p>;
     } else if (this.state.errorMessage) {
-      data = <p className="loading-status-text">Something went wrong: {this.state.errorMessage}</p>
+      data = <p>Something went wrong: {this.state.errorMessage}</p>
     }
 
     return (
@@ -224,13 +224,10 @@ class App extends React.Component {
           <CityNameInput getWeatherInfo={this.getWeatherInfo} />
         </div>
 
-        <div className="loading-status">
-          {data}
-        </div>
-
         <div className="weather-result">
-          <div className="city-list">
+          <div className="weather-result-content">
             <div className="key-search">
+              {data}
               <p>{this.state.nameInputShow}</p>
             </div>
 
@@ -246,204 +243,6 @@ class App extends React.Component {
                   ))
                 }
               </ul>
-            </div>
-          </div>
-
-          <div className="weather-content">
-            <div className="weather-title">
-              <p>{this.state.cityShowTitle}</p>
-            </div>
-            
-            <div className="weather-result-main">
-              <div className="main-result-weather">
-                <div className="weather-temp">
-                  <div className="state-name-temp">
-                    <div className="state-name-weather">
-                      <p className="weather-state-name">{this.state.weatherStateName1}</p>
-                    </div>
-
-                    <div className="temp-weather">
-                      <p className="the-temp">{this.state.theTemp1}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="ico-abbr">
-                    <img src={this.state.weatherStateAbbr1} alt="" />
-                  </div>
-                </div>
-
-                <div className="min-max-temp">
-                  <div className="min-temp">
-                    <p>{this.state.minTemp1}</p>
-                  </div>
-
-                  <div className="max-temp">
-                    <p>{this.state.maxTemp1}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="follow-result-weather-day">
-                <div className="day2-result-weather" onClick={this.dayWeatherDetail} >
-                  <div className="applicable-date">
-                    <h3>{this.state.applicableDate1}</h3>
-                  </div>
-
-                  <div className="weather-temp2">
-                    <div className="state-name-temp2">
-                      <div className="state-name-weather2">
-                        <p className="weather-state-name2">{this.state.weatherStateName2}</p>
-                      </div>
-
-                      <div className="temp-weather2">
-                        <p className="the-temp2">{this.state.theTemp2}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="ico-abbr2">
-                      <img src={this.state.weatherStateAbbr2} alt="" />
-                    </div>
-                  </div>
-
-                  <div className="min-max-temp2">
-                    <div className="min-temp2">
-                      <p>{this.state.minTemp2}</p>
-                    </div>
-
-                    <div className="max-temp2">
-                      <p>{this.state.maxTemp2}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="day2-result-weather">
-                  <div className="applicable-date">
-                    <h3>{this.state.applicableDate3}</h3>
-                  </div>
-                  
-                  <div className="weather-temp2">
-                    <div className="state-name-temp2">
-                      <div className="state-name-weather2">
-                        <p className="weather-state-name2">{this.state.weatherStateName3}</p>
-                      </div>
-
-                      <div className="temp-weather2">
-                        <p className="the-temp2">{this.state.theTemp3}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="ico-abbr2">
-                      <img src={this.state.weatherStateAbbr3} alt="" />
-                    </div>
-                  </div>
-
-                  <div className="min-max-temp2">
-                    <div className="min-temp2">
-                      <p>{this.state.minTemp3}</p>
-                    </div>
-
-                    <div className="max-temp2">
-                      <p>{this.state.maxTemp3}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="day2-result-weather">
-                  <div className="applicable-date">
-                    <h3>{this.state.applicableDate4}</h3>
-                  </div>
-                  
-                  <div className="weather-temp2">
-                    <div className="state-name-temp2">
-                      <div className="state-name-weather2">
-                        <p className="weather-state-name2">{this.state.weatherStateName4}</p>
-                      </div>
-
-                      <div className="temp-weather2">
-                        <p className="the-temp2">{this.state.theTemp4}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="ico-abbr2">
-                      <img src={this.state.weatherStateAbbr4} alt="" />
-                    </div>
-                  </div>
-
-                  <div className="min-max-temp2">
-                    <div className="min-temp2">
-                      <p>{this.state.minTemp4}</p>
-                    </div>
-
-                    <div className="max-temp2">
-                      <p>{this.state.maxTemp4}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="day2-result-weather">
-                  <div className="applicable-date">
-                    <h3>{this.state.applicableDate5}</h3>
-                  </div>
-                  
-                  <div className="weather-temp2">
-                    <div className="state-name-temp2">
-                      <div className="state-name-weather2">
-                        <p className="weather-state-name2">{this.state.weatherStateName5}</p>
-                      </div>
-
-                      <div className="temp-weather2">
-                        <p className="the-temp2">{this.state.theTemp5}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="ico-abbr2">
-                      <img src={this.state.weatherStateAbbr5} alt="" />
-                    </div>
-                  </div>
-
-                  <div className="min-max-temp2">
-                    <div className="min-temp2">
-                      <p>{this.state.minTemp5}</p>
-                    </div>
-
-                    <div className="max-temp2">
-                      <p>{this.state.maxTemp5}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="day2-result-weather">
-                  <div className="applicable-date">
-                    <h3>{this.state.applicableDate6}</h3>
-                  </div>
-                  
-                  <div className="weather-temp2">
-                    <div className="state-name-temp2">
-                      <div className="state-name-weather2">
-                        <p className="weather-state-name2">{this.state.weatherStateName6}</p>
-                      </div>
-
-                      <div className="temp-weather2">
-                        <p className="the-temp2">{this.state.theTemp6}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="ico-abbr2">
-                      <img src={this.state.weatherStateAbbr6} alt="" />
-                    </div>
-                  </div>
-
-                  <div className="min-max-temp2">
-                    <div className="min-temp2">
-                      <p>{this.state.minTemp6}</p>
-                    </div>
-
-                    <div className="max-temp2">
-                      <p>{this.state.maxTemp6}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

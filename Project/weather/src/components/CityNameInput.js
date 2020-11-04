@@ -27,7 +27,7 @@ class CityNameInput extends React.Component {
                     value={this.state.nameOfCity} 
                     placeholder="Type city name here..." 
                     onChange={this.inputCityName} />
-                <button className="input-css" onClick={() => this.props.getWeatherInfo(this.state.nameOfCity)}>Submit</button>
+                <button className="input-css btn-submit" onClick={() => this.props.getWeatherInfo(this.state.nameOfCity)}>Submit</button>
             </div>
         )
     }
