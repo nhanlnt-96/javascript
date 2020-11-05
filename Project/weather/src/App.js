@@ -257,7 +257,22 @@ class App extends React.Component {
               </div>
 
               <div className="weather-result-detail">
-                hello
+                <div className="city-title">
+                  <p>{this.state.cityShowTitle}</p>
+                </div>
+
+                <div className="weather-result">
+                  <div className="main-weather-day-min-max-temp">
+                    <div className="main-weather-day">
+                      {this.state.applicableDate1}
+                    </div>
+                    
+                    <div className="main-weather-min-max-temp">
+                      {this.state.minTemp1}
+                      {this.state.maxTemp1}
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="weather-day-result">
