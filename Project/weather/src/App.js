@@ -138,6 +138,14 @@ class App extends React.Component {
         isBusy: false
       })
     }
+    
+    const movingContainer = document.getElementById('moving-container');
+    const width = movingContainer.offsetWidth;
+    const movingWidth = width - 1080*3;
+
+    movingContainer.style.left = `${movingWidth}px`
+
+    console.log(`console result is ${movingWidth}`);
   }
 
   onClickCityTitle = async (cityTitle) => {
@@ -214,10 +222,6 @@ class App extends React.Component {
     console.log(`console result is ${movingWidth}`);
   }
 
-  dayWeatherDetail = () => {
-    console.log(this.state.weatherResult.title);
-  }
-
   render() {
     let data = null;
     if (this.state.isBusy && !this.state.errorMessage) {
@@ -261,15 +265,10 @@ class App extends React.Component {
                   <p>{this.state.cityShowTitle}</p>
                 </div>
 
-                <div className="weather-result">
-                  <div className="main-weather-day-min-max-temp">
-                    <div className="main-weather-day">
+                <div className="weather-day-detail">
+                  <div className="weather-day-header">
+                    <div className="weather-day">
                       {this.state.applicableDate1}
-                    </div>
-                    
-                    <div className="main-weather-min-max-temp">
-                      {this.state.minTemp1}
-                      {this.state.maxTemp1}
                     </div>
                   </div>
                 </div>

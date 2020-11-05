@@ -65,7 +65,7 @@
     height: 550px;
     display: flex;
     flex-direction: row;
-    /*overflow: hidden;*/
+    overflow: hidden;
     border-radius: 10px;
 }
 
@@ -124,6 +124,10 @@
 .weather-result-detail {
     width: 1080px;
     height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -134,11 +138,38 @@
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-.weather-result {
-    width: 100%;
+.weather-day-detail {
+    width: 70%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+}
+
+.weather-day-header {
+    height: 15%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+}
+
+.weather-day {
+    width: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-day-result {
+    width: 1080px;
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
