@@ -204,6 +204,14 @@ class App extends React.Component {
         })
       }
     }
+
+    const movingContainer = document.getElementById('moving-container');
+    const width = movingContainer.offsetWidth;
+    const movingWidth = width - 1080*4;
+
+    movingContainer.style.left = `${movingWidth}px`
+
+    console.log(`console result is ${movingWidth}`);
   }
 
   dayWeatherDetail = () => {
@@ -225,24 +233,36 @@ class App extends React.Component {
         </div>
 
         <div className="weather-result">
-          <div className="weather-result-content">
-            <div className="key-search">
-              {data}
-              <p>{this.state.nameInputShow}</p>
-            </div>
+          <div className="weather-slider">
+            <div className="weather-slider-wrapper" id="moving-container">
+              <div className="weather-result-search">
+                <div className="key-search">
+                  {data}
+                  <p>{this.state.nameInputShow}</p>
+                </div>
 
-            <div className="key-search-list">
-              <ul>
-                {
-                  this.state.cityNameByTextResult.map((cityTitle, index) => (
-                    <li 
-                      key={cityTitle.woeid} 
-                      onClick={() => this.onClickCityTitle(cityTitle)}>
-                      {index+1}. {cityTitle.title} - {cityTitle.woeid}
-                    </li>
-                  ))
-                }
-              </ul>
+                <div className="key-search-list">
+                  <ul>
+                    {
+                      this.state.cityNameByTextResult.map((cityTitle, index) => (
+                        <li 
+                          key={cityTitle.woeid} 
+                          onClick={() => this.onClickCityTitle(cityTitle)}>
+                          {index+1}. {cityTitle.title} - {cityTitle.woeid}
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </div>
+              </div>
+
+              <div className="weather-result-detail">
+                hello
+              </div>
+
+              <div className="weather-day-result">
+                i am Nhan
+              </div>
             </div>
           </div>
         </div>
