@@ -327,12 +327,12 @@ class App extends React.Component {
   }
 
   btnAnotherDay = (number) => {
-    const colorChange1 = document.getElementById('another-day1');
-    const colorChange2 = document.getElementById('another-day2');
-    const colorChange3 = document.getElementById('another-day3');
-    const colorChange4 = document.getElementById('another-day4');
-    const colorChange5 = document.getElementById('another-day5');
-    const colorChange6 = document.getElementById('another-day6');
+    let colorChange1 = document.getElementById('another-day1');
+    let colorChange2 = document.getElementById('another-day2');
+    let colorChange3 = document.getElementById('another-day3');
+    let colorChange4 = document.getElementById('another-day4');
+    let colorChange5 = document.getElementById('another-day5');
+    let colorChange6 = document.getElementById('another-day6');
     
     switch (number) {
       case 1:
@@ -348,6 +348,12 @@ class App extends React.Component {
           pressure: this.state.pressure1,
           weatherStateAbbr: this.state.weatherStateAbbr1,
         });
+        colorChange1.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        colorChange2.style.backgroundColor = 'transparent';
+        colorChange3.style.backgroundColor = 'transparent';
+        colorChange4.style.backgroundColor = 'transparent';
+        colorChange5.style.backgroundColor = 'transparent';
+        colorChange6.style.backgroundColor = 'transparent';
         break;
       case 2:
         this.setState ({
@@ -362,6 +368,12 @@ class App extends React.Component {
           pressure: this.state.pressure2,
           weatherStateAbbr: this.state.weatherStateAbbr2,
         });
+        colorChange2.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        colorChange1.style.backgroundColor = 'transparent';
+        colorChange3.style.backgroundColor = 'transparent';
+        colorChange4.style.backgroundColor = 'transparent';
+        colorChange5.style.backgroundColor = 'transparent';
+        colorChange6.style.backgroundColor = 'transparent';
         break;
       case 3:
         this.setState ({
@@ -376,6 +388,12 @@ class App extends React.Component {
           pressure: this.state.pressure3,
           weatherStateAbbr: this.state.weatherStateAbbr3,
         });
+        colorChange3.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        colorChange2.style.backgroundColor = 'transparent';
+        colorChange1.style.backgroundColor = 'transparent';
+        colorChange4.style.backgroundColor = 'transparent';
+        colorChange5.style.backgroundColor = 'transparent';
+        colorChange6.style.backgroundColor = 'transparent';
         break;
       case 4:
         this.setState ({
@@ -390,6 +408,12 @@ class App extends React.Component {
           pressure: this.state.pressure4,
           weatherStateAbbr: this.state.weatherStateAbbr4,
         });
+        colorChange4.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        colorChange2.style.backgroundColor = 'transparent';
+        colorChange3.style.backgroundColor = 'transparent';
+        colorChange1.style.backgroundColor = 'transparent';
+        colorChange5.style.backgroundColor = 'transparent';
+        colorChange6.style.backgroundColor = 'transparent';
         break;
       case 5:
         this.setState ({
@@ -404,6 +428,12 @@ class App extends React.Component {
           pressure: this.state.pressure5,
           weatherStateAbbr: this.state.weatherStateAbbr5,
         });
+        colorChange5.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        colorChange2.style.backgroundColor = 'transparent';
+        colorChange3.style.backgroundColor = 'transparent';
+        colorChange4.style.backgroundColor = 'transparent';
+        colorChange1.style.backgroundColor = 'transparent';
+        colorChange6.style.backgroundColor = 'transparent';
         break;
       case 6:
         this.setState ({
@@ -418,6 +448,12 @@ class App extends React.Component {
           pressure: this.state.pressure6,
           weatherStateAbbr: this.state.weatherStateAbbr6,
         });
+        colorChange6.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        colorChange2.style.backgroundColor = 'transparent';
+        colorChange3.style.backgroundColor = 'transparent';
+        colorChange4.style.backgroundColor = 'transparent';
+        colorChange5.style.backgroundColor = 'transparent';
+        colorChange1.style.backgroundColor = 'transparent';
         break;
       default:
         console.log('nothing to show');
