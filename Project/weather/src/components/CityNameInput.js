@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-class CityNameInput extends React.Component {
+export class CityNameInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,5 +32,3 @@ class CityNameInput extends React.Component {
         )
     }
 }
-
-export default CityNameInput;
