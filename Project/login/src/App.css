@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.App, .form-login-component {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #3D188C, #2B0A59);
+}
+
+.form-login-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login-component input {
+    padding: 5px;
+    outline: none;
+    border: none;
+    margin: 10px;
+}
+
+.form-login-component button {
+    margin: 10px;
+    padding: 5px;
+    color: white;
+    outline: none;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.form-login-component button:hover {
+    background: rgba(225, 225, 225, 0.4);
+}
+
+.link-to-home {
+    color: white;
+    text-decoration: none;
+}
