@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css'
 
-const LoginForm = ({ isAuth, setIsAuth }) => {
+const LoginForm = ({ setIsAuth }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -15,10 +15,9 @@ const LoginForm = ({ isAuth, setIsAuth }) => {
 
     const loginBtn = () => {
         if (username === "admin" && password === "admin") {
-            setIsAuth(true)
+            setIsAuth(false)
         } else {
-            console.log("wrong")
-            console.log(isAuth)
+            console.log("username or password is wrong")
         }
     }
     return (
