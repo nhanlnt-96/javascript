@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css'
 
 const LoginForm = ({ setIsAuth }) => {
@@ -15,16 +16,17 @@ const LoginForm = ({ setIsAuth }) => {
 
     const loginBtn = () => {
         if (username === "admin" && password === "admin") {
-            setIsAuth(false)
+            setIsAuth(true)
         } else {
             console.log("username or password is wrong")
         }
     }
+
     return (
         <div className="form-login-component">
             <input type="text" placeholder="username" onChange={userInput} />
             <input type="password" placeholder="password" onChange={passInput} />
-            <button onClick={loginBtn}>Login</button>
+            <button onClick={loginBtn}><Link to="/">Login</Link></button>
         </div>
     );
 }

@@ -7,7 +7,7 @@ import ProtectRoute from './protectRoute/PrivateRoute'
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
-  console.log(isAuth)
+
   return (
     <Router>
       <ProtectRoute path="/" exact component={Home} isAuth={isAuth} />
