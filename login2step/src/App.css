@@ -63,6 +63,10 @@ input[type=number] {
   outline: none;
 }
 
+.login-block .active {
+  border-color: red;
+}
+
 .login-btn {
   display: flex;
   flex-direction: row;

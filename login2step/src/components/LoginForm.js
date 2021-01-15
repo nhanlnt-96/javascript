@@ -13,14 +13,17 @@ const LoginForm = () => {
     const [dob, setDob] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [isEmpty, setIsEmpty] = useState(false);
 
+    let movingLeft = 0;
     const nextBtn = () => {
-        const movingContainer = document.getElementById("moving-container");
-        const width = movingContainer.offsetWidth;
-        const movingWidth = -100;
+        const movingContainer = document.getElementById('moving-container')
+        movingLeft -= 100;
 
-        movingContainer.style.left = `${movingWidth}%`
+        (fname != "") ? movingContainer.style.left = `${movingLeft}%` : setIsEmpty(true)
+        (lname != "") ? movingContainer.style.left = `${movingLeft}%` : setIsEmpty(true)
     }
+
     return (
         <div className="login-form">
             <div className="login-container">
@@ -30,6 +33,7 @@ const LoginForm = () => {
                         setFname={setFname}
                         lname={lname}
                         setLname={setLname}
+                        isEmpty={isEmpty}
                         nextBtn={nextBtn} />
 
                     <ContactInfo

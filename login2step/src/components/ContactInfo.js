@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 
-const ContactInfo = () => {
+const ContactInfo = ({ nextBtn }) => {
     return (
         <div className="login-block">
             <p>Contact Info:</p>
@@ -9,7 +9,7 @@ const ContactInfo = () => {
             <input type="number" placeholder="Phone..." />
             <div className="login-btn">
                 <button>Previous</button>
-                <button>Next</button>
+                <button onClick={nextBtn}>Next</button>
             </div>
         </div>
     );
