@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
 import '../App.css';
 import ContactInfo from './ContactInfo';
 import DateOfBirth from './DateOfBirth';
@@ -60,4 +59,4 @@ const LoginForm = () => {
     );
 }
 
-export default withRouter(LoginForm);
+export default LoginForm;
