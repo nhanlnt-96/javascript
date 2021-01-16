@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import '../App.css';
 import ContactInfo from './ContactInfo';
 import DateOfBirth from './DateOfBirth';
@@ -13,15 +14,18 @@ const LoginForm = () => {
     const [dob, setDob] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [isEmpty, setIsEmpty] = useState(false);
 
     let movingLeft = 0;
     const nextBtn = () => {
         const movingContainer = document.getElementById('moving-container')
         movingLeft -= 100;
+        movingContainer.style.left = `${movingLeft}%`
+    }
 
-        (fname != "") ? movingContainer.style.left = `${movingLeft}%` : setIsEmpty(true)
-        (lname != "") ? movingContainer.style.left = `${movingLeft}%` : setIsEmpty(true)
+    const prevBtn = () => {
+        const movingContainer = document.getElementById('moving-container')
+        movingLeft += 100;
+        movingContainer.style.left = `${movingLeft}%`
     }
 
     return (
@@ -33,23 +37,27 @@ const LoginForm = () => {
                         setFname={setFname}
                         lname={lname}
                         setLname={setLname}
-                        isEmpty={isEmpty}
                         nextBtn={nextBtn} />
 
                     <ContactInfo
                         setEmail={setEmail}
-                        setPhone={setPhone} />
+                        setPhone={setPhone}
+                        nextBtn={nextBtn}
+                        prevBtn={prevBtn} />
 
                     <DateOfBirth
-                        setDob={setDob} />
+                        setDob={setDob}
+                        nextBtn={nextBtn}
+                        prevBtn={prevBtn} />
 
                     <LoginInfo
                         setUsername={setUsername}
-                        setPassword={setPassword} />
+                        setPassword={setPassword}
+                        prevBtn={prevBtn} />
                 </div>
             </div>
         </div>
     );
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);
