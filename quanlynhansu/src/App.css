@@ -44,7 +44,6 @@
   width: 60%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 .dropdown {
@@ -137,8 +136,29 @@
   }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 768px) {
   body {
-     display: none;
+    /* overflow-x: hidden; */
   }
+
+  .NavBar {
+    background: antiquewhite;
+  }
+
+  .right-bar {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    transform: translateX(100%);
+  }
+
+  /* .dropdown {
+    opacity: 0;
+  } */
 }
