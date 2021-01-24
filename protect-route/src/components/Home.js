@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-const Home = ({ setIsAuth }) => {
+const Home = ({ history }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [errorMsg, setErrorMsg] = useState("");
 
     const userInput = (e) => {
         setUsername(e.target.value)
@@ -15,9 +16,9 @@ const Home = ({ setIsAuth }) => {
 
     const submitBtn = () => {
         if (username === "admin" && password === "admin") {
-            setIsAuth(true)
+            history.push('/profile');
         } else {
-            console.log("wrong user or pass");
+            setErrorMsg("Wrong username or password");
         }
     }
 
@@ -25,9 +26,10 @@ const Home = ({ setIsAuth }) => {
         <div>
             <input type="text" placeholder="username" onChange={userInput} />
             <input type="password" placeholder="password" onChange={passInput} />
-            <button onClick={submitBtn}><Link to="/profile">Submit</Link></button>
+            <button onClick={submitBtn}>Submit</button>
+            {errorMsg && <p>{errorMsg}</p>}
         </div>
     );
 }
 
-export default Home;
+export default withRouter(Home);
