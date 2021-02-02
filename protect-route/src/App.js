@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import RouterOutlet from './routerOutlet';
+import RouterOutlet from './components/routerOutlet';
 
 import './App.css';
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
-
+  const isLogged = useSelector(state => state.isLogged);
   return (
     <div>
       {
-        isAuth && (
+        isLogged && (
           <header>
             This is app Header
           </header>
@@ -18,7 +18,7 @@ function App() {
       }
       <div>
         Main content here
-        <RouterOutlet isAuth={isAuth} />
+        <RouterOutlet />
       </div>
       <footer>
         This is footer

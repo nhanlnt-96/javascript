@@ -1,5 +1,5 @@
 {
-  "name": "protect-route",
+  "name": "login-with-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
